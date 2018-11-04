@@ -1,6 +1,6 @@
 # Dynamic-Hub-API
 
-Dynamic Hub API Examples in PHP
+Dynamic Hub API Examples
 
 This repository contain's example PHP code to connect to the Dynamic Hub API.
 
