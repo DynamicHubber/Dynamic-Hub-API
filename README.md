@@ -1,12 +1,26 @@
 # Dynamic-Hub-API
 
-Dynamic Hub API Examples
+Dynamic Hub API Examples in PHP
 
 This repository contain's example PHP code to connect to the Dynamic Hub API.
 
+To start with you need to get the following details from Dynamic Hub
 
+* CLIENT_ID
+* TOKEN_REQUEST_ENDPOINT
+* REQUEST_ENDPOINT
+* CLIENT_SECRET
 
-Send a PUT request with the latest statuses of orders.
+These values will then need to be added to the top of the SendOrderStatusToDynamicHub.php file as follows:
+
+```
+const CLIENT_ID = '';
+const TOKEN_REQUEST_ENDPOINT = '';
+const REQUEST_ENDPOINT = '';
+const CLIENT_SECRET = '';
+```
+
+To send a PUT request with the latest statuses of orders use the following code:
 
 ```
 <?php 
