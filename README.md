@@ -13,7 +13,7 @@ This repository contain's example PHP code to connect to the Dynamic Hub API.
 //Valid statuses:
 //paused, assigned, in_progress, in_qa, rejected, complete
 
-include_once('');
+include_once('SendOrderStatusToDynamicHub.php');
 
 $callData =  [
                 'ecomus_nucleus_entity_code' => 'workshop_wsitemstatus',
