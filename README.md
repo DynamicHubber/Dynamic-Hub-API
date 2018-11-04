@@ -6,6 +6,8 @@ This repository contain's example PHP code to connect to the Dynamic Hub API.
 
 
 
+Send a PUT request with the latest statuses of orders.
+
 ```
 <?php 
 
