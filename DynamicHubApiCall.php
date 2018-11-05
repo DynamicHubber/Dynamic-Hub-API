@@ -9,10 +9,10 @@ class DynamicHub_Client
     const REQUEST_ENDPOINT = '';
     const CLIENT_SECRET = '';
         
-    public function pushEntities($data)
+    public function pushEntities($data, $httpMethod="POST")
     {
         $accessToken = $this->_getAccessToken();
-        $result = $this->_transferEntity($accessToken, $data);
+        $result = $this->_transferEntity($accessToken, $data, $httpMethod);
         return $result;
     }
 
@@ -60,7 +60,7 @@ class DynamicHub_Client
         return $accessToken;
     }
 
-    protected function _transferEntity($accessToken, $data)
+    protected function _transferEntity($accessToken, $data, $httpMethod)
     {
         $ch = curl_init();
 
@@ -73,7 +73,7 @@ class DynamicHub_Client
             'Expect:'
         ));
 
-        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, 'PUT');
+        curl_setopt($ch, CURLOPT_CUSTOMREQUEST, $httpMethod);
         curl_setopt($ch, CURLOPT_CONNECTTIMEOUT, self::CURL_TIMEOUT_SECS); 
         curl_setopt($ch, CURLOPT_TIMEOUT, self::CURL_TIMEOUT_SECS); 
         curl_setopt($ch, CURLOPT_POSTFIELDS, json_encode($data));
