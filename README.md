@@ -29,7 +29,7 @@ To send a PUT request with the latest statuses of orders use the following code:
 //Valid statuses:
 //paused, assigned, in_progress, in_qa, rejected, complete
 
-include_once('SendOrderStatusToDynamicHub.php');
+include_once('DynamicHubApiCall.php');
 
 $callData =  [
                 'ecomus_nucleus_entity_code' => 'workshop_wsitemstatus',
