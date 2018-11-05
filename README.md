@@ -11,7 +11,7 @@ To start with you need to get the following details from Dynamic Hub
 * REQUEST_ENDPOINT
 * CLIENT_SECRET
 
-These values will then need to be added to the top of the SendOrderStatusToDynamicHub.php file as follows:
+These values will then need to be added to the top of the DynamicHubApiCall.php file as follows:
 
 ```
 const CLIENT_ID = '';
@@ -49,7 +49,7 @@ $callData =  [
 
 try {
     $client = new DynamicHub_Client;
-    $response = print_r($client->pushEntities($callData), true);
+    $response = print_r($client->pushEntities($callData, "PUT"), true);
     echo "Successful call, response was {$response}\n";
 } catch (Exception $e) {
     echo "Failed to make call, error was {$e->getMessage()}\n";
@@ -57,9 +57,12 @@ try {
 
 ```
 
-
-
-
+The http method are as follows:
+* GET
+* POST
+* PUT
+* DELETE
+* PATCH
 
 
 
