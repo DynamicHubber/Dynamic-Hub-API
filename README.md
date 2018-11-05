@@ -31,20 +31,22 @@ To send a PUT request with the latest statuses of orders use the following code:
 
 include_once('DynamicHubApiCall.php');
 
-$callData =  [
-                'ecomus_nucleus_entity_code' => 'workshop_wsitemstatus',
-                'ecomus_nucleus_job_id' => 1,
-                'order_id' => 'PTD-0001',
-                'order_item_index' => 1,
-                'product_name' => 'Test Product 1',
-                'status' => 'paused'
-            ], [
-                'ecomus_nucleus_entity_code' => 'workshop_wsitemstatus',
-                'ecomus_nucleus_job_id' => 2,
-                'order_id' => 'PTD-0002',
-                'order_item_index' => 1,
-                'product_name' => 'Test Product 2',
-                'status' => 'complete'
+$callData = [
+                [
+                    'ecomus_nucleus_entity_code' => 'workshop_wsitemstatus',
+                    'ecomus_nucleus_job_id' => 1,
+                    'order_id' => 'PTD-0001',
+                    'order_item_index' => 1,
+                    'product_name' => 'Test Product 1',
+                    'status' => 'paused'
+                ], [
+                    'ecomus_nucleus_entity_code' => 'workshop_wsitemstatus',
+                    'ecomus_nucleus_job_id' => 2,
+                    'order_id' => 'PTD-0002',
+                    'order_item_index' => 1,
+                    'product_name' => 'Test Product 2',
+                    'status' => 'complete'
+                ]
             ];
 
 try {
