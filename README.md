@@ -66,6 +66,27 @@ The http method are as follows:
 * DELETE
 * PATCH
 
+Here is a possible reponse from the above test API call (converted to an array from the returned JSON):
+```
+Array
+(
+    [0] => Array
+        (
+            [job_id] => 1
+            [status] => success
+            [error_description] => 
+        )
+
+    [1] => Array
+        (
+            [job_id] => 2
+            [status] => success
+            [error_description] => 
+        )
+
+)
+```
+
 
 
 If you would like more information on the product Dynamic Hub please visit our website at: https://www.dynamichub.co.uk/
